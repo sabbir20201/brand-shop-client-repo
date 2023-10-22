@@ -2,11 +2,12 @@ import React from 'react';
 import { useContext } from 'react';
 import { useCallback } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
     const {signIn} = useContext(AuthContext);
-
+    const navigate = useNavigate()
 
     const handleLogin = e => {
         e.preventDefault();
@@ -17,6 +18,9 @@ const Login = () => {
         signIn(email, password)
         .then(result => {
             console.log(result.user);
+            e.target.reset();
+            navigate('/')
+
         })
         .catch(error => {
             console.error(error);

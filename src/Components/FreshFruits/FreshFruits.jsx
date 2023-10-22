@@ -1,8 +1,8 @@
 
 const FreshFruits = () => {
     return (
-        <div>
-        <div className="grid grid-cols-1 lg:grid-cols-2">
+        <div className="">
+        <div className="grid grid-cols-1 lg:grid-cols-2 my-10">
         <div>
             <img src="https://i.ibb.co/VqN4TqZ/juice.png" />
         </div>

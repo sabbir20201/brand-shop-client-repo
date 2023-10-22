@@ -1,0 +1,35 @@
+{
+    "brands": [
+      {
+        "id": 1,
+        "name": "Coca Cola",
+        "image_url": "https://www.example.com/brandA-image.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Pepsi Co",
+        "image_url": "https://www.example.com/brandB-image.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Brand C",
+        "image_url": "https://www.example.com/brandC-image.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Brand D",
+        "image_url": "https://www.example.com/brandD-image.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Brand E",
+        "image_url": "https://www.example.com/brandE-image.jpg"
+      },
+      {
+        "id": 6,
+        "name": "Brand F",
+        "image_url": "https://www.example.com/brandF-image.jpg"
+      }
+    ]
+  }
+  
