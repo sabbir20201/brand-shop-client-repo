@@ -7,28 +7,28 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
 import MyCard from "../Pages/MyCard/MyCard";
-import UpdateProduct from "../Pages/UpdateProduct/UpdateProduct";
-import Brands from "../Components/Brands/Brands";
+import AllProduct from "../Pages/Product/AllProduct";
+
+
 
 const MyCreatedRoutes = createBrowserRouter([
     {
-        path:'/',
-        element: <Root></Root> ,
-        errorElement:<ErrorPage></ErrorPage>,
+        path: '/',
+        element: <Root></Root>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: ()=> fetch('/data.json'),
+            },
+            {
+                path:'/allproduct/:id',
+                element:<AllProduct></AllProduct>
             },
             {
                 path: '/AddProduct',
-                element: <AddProduct></AddProduct>
-            },
-
-            {
-                path: '/brand',
-                element: <Brands></Brands>,
-                loader:()=> fetch('/data.json')
+                element: <PrivateRoutes><AddProduct></AddProduct></PrivateRoutes>
             },
             {
                 path: '/myCard',
@@ -43,15 +43,12 @@ const MyCreatedRoutes = createBrowserRouter([
                 path: '/Register',
                 element: <Register></Register>
 
-            },
-            {
-                path: '/updateCoffee',
-                element: <UpdateProduct></UpdateProduct>
             }
-      
+    
+
         ]
-        
+
     }
-]) 
+])
 
 export default MyCreatedRoutes;

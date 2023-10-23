@@ -2,33 +2,39 @@
     "brands": [
       {
         "id": 1,
-        "name": "Coca Cola",
-        "image_url": "https://www.example.com/brandA-image.jpg"
+        "product_id": "a",
+        "name": "Berger King",
+        "image_url": "https://i.ibb.co/vhYzGyj/burger-king-bk-vector-logo.png"
       },
       {
         "id": 2,
+        "product_id": "b",
         "name": "Pepsi Co",
-        "image_url": "https://www.example.com/brandB-image.jpg"
+        "image_url": "https://i.ibb.co/Sy3pST0/pepsi-eps-vector-logo.png"
       },
       {
         "id": 3,
-        "name": "Brand C",
-        "image_url": "https://www.example.com/brandC-image.jpg"
+        "product_id": "c",
+        "name": "Nescafe",
+        "image_url": "https://i.ibb.co/6RBN5Jp/6105.png"
       },
       {
         "id": 4,
-        "name": "Brand D",
-        "image_url": "https://www.example.com/brandD-image.jpg"
+        "product_id": "d",
+        "name": "Coca Cola",
+        "image_url": "https://i.ibb.co/Y0qfq2p/maximilian-bruck-4-SKd-Rc-Y13j4-unsplash.jpg"
       },
       {
         "id": 5,
-        "name": "Brand E",
-        "image_url": "https://www.example.com/brandE-image.jpg"
+        "product_id": "e",
+        "name": "StarBucks",
+        "image_url": "https://i.ibb.co/jzV0k29/matteo-gozzi-QD04-Vta-Sc-NY-unsplash.jpg"
       },
       {
         "id": 6,
-        "name": "Brand F",
-        "image_url": "https://www.example.com/brandF-image.jpg"
+        "product_id": "f",
+        "name": "kelloggs",
+        "image_url": "https://i.ibb.co/6BZLH88/kelloggs-brand-logo-london-uk-october-th-close-up-packet-frosties-th-october-78930669.jpg"
       }
     ]
   }

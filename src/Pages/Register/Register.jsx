@@ -1,10 +1,13 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { NavLink } from 'react-router-dom';
 
 const Register = () => {
 
-    const {createUser} = useContext(AuthContext)
+    const { createUser } = useContext(AuthContext)
+    const [registerError, setRegisterError] = useState('');
+    const [registerSuccess, setRegisterSuccess] = useState('');
+
 
     const handleRegister = e => {
         e.preventDefault();
@@ -14,13 +17,29 @@ const Register = () => {
         const password = form.get('password');
         console.log(email, password, name);
 
+        setRegisterError('');
+        setRegisterSuccess('');
+
+        if(password.length < 6) {
+            setRegisterError('password should be at least 6 characters or longer');
+            return;
+        }else if(!/^(?=.*[A-Z])(?=.*[!#])/.test(password)){
+            setRegisterError('your password must be at leaset one capital letter and special characters');
+            return
+        }
+
+
+
         createUser(email, password)
-        .then(result => {
-            console.log(result.user);
-        })
-        .catch(error =>{
-            console.error(error);
-        })
+            .then(result => {
+                console.log(result.user);
+                e.target.reset();
+                setRegisterSuccess('User created successfully')
+            })
+            .catch(error => {
+                console.error(error);
+                setRegisterError(error.message);
+            })
 
     }
 
@@ -29,7 +48,7 @@ const Register = () => {
         <div>
 
             <h1 className="">register now</h1>
-            <div className="w-4/3">
+            <div className="w-1/2 mx-auto">
                 <form onSubmit={handleRegister}>
                     <div className="form-control">
                         <label className="label">
@@ -52,13 +71,31 @@ const Register = () => {
                             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                         </label>
                     </div>
+                    <div>
+                {
+                    registerSuccess && <p className='text-green-600 font-semi-bold'>{registerSuccess}</p>
+                    
+                }
+                {
+                    registerError &&
+                    <div className="text-red-400">
+                        {registerError}
+                    </div>
+                }
+                </div>
+
+
+
                     <div className="form-control mt-6">
-                        <button className="btn btn-primary">Login</button>
+                        <button className="btn btn-primary">Sign Up</button>
                     </div>
                 </form>
                 <div>
-                already have an account? <NavLink to="/Login">Login </NavLink>
+                    already have an account? <NavLink to="/Login" className="text-green-400 font-semibold">Login </NavLink>
                 </div>
+            
+            
+
             </div>
         </div>
     );
