@@ -8,6 +8,7 @@ import Register from "../Pages/Register/Register";
 import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
 import MyCard from "../Pages/MyCard/MyCard";
 import AllProduct from "../Pages/Product/AllProduct";
+import ProductDetail from "../Pages/ProductDetail/ProductDetail";
 
 
 
@@ -20,11 +21,18 @@ const MyCreatedRoutes = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: ()=> fetch('/data.json'),
+                loader: () => fetch('/data.json'),
             },
             {
-                path:'/allproduct/:id',
-                element:<AllProduct></AllProduct>
+                path: '/product/:brand',
+                element: <AllProduct></AllProduct>,
+                loader: ({ params }) => fetch(`http://localhost:5000/product/${params.brand}`)
+            },
+
+            {
+                path: '/product/brand/:id',
+                element: <ProductDetail></ProductDetail>,
+                loader: ({ params }) => fetch(`http://localhost:5000/product/brand/${params.id}`)
             },
             {
                 path: '/AddProduct',
@@ -44,7 +52,7 @@ const MyCreatedRoutes = createBrowserRouter([
                 element: <Register></Register>
 
             }
-    
+
 
         ]
 

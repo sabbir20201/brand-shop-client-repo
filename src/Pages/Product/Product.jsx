@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 
 const Product = ({ data }) => {
-  const {id, product_id,name, image_url } = data
+  const {id, name, image_url } = data
   console.log(id);
 
   return (
 
     <div>
-      <Link to={`/allproduct/${product_id}`}>
+      <Link to={`/product/${name}`}>
         <div className="card bg-base-100 shadow-xl">
           <figure className="py-10">
             <img src={image_url} alt="Shoes" className="rounded-xl max-h-40" />

@@ -3,31 +3,31 @@
       {
         "id": 1,
         "product_id": "a",
-        "name": "Berger King",
+        "name": "berger",
         "image_url": "https://i.ibb.co/vhYzGyj/burger-king-bk-vector-logo.png"
       },
       {
         "id": 2,
         "product_id": "b",
-        "name": "Pepsi Co",
+        "name": "pepsi",
         "image_url": "https://i.ibb.co/Sy3pST0/pepsi-eps-vector-logo.png"
       },
       {
         "id": 3,
         "product_id": "c",
-        "name": "Nescafe",
+        "name": "nescafe",
         "image_url": "https://i.ibb.co/6RBN5Jp/6105.png"
       },
       {
         "id": 4,
         "product_id": "d",
-        "name": "Coca Cola",
+        "name": "cocaCola",
         "image_url": "https://i.ibb.co/Y0qfq2p/maximilian-bruck-4-SKd-Rc-Y13j4-unsplash.jpg"
       },
       {
         "id": 5,
         "product_id": "e",
-        "name": "StarBucks",
+        "name": "starBucks",
         "image_url": "https://i.ibb.co/jzV0k29/matteo-gozzi-QD04-Vta-Sc-NY-unsplash.jpg"
       },
       {

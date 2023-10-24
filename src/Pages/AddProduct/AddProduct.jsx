@@ -36,23 +36,23 @@ const AddProduct = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                if(data.insertedId)
-                Swal.fire({
-                    title: 'success',
-                    text: 'product successfully inserted',
-                    title: 'success',
-                    icon: 'success',
-                    confirmButtonText: 'Cool'
-                  })
+                if (data.insertedId)
+                    Swal.fire({
+                        title: 'success',
+                        text: 'product successfully inserted',
+                        title: 'success',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
             })
     }
 
 
     return (
         <div>
-  
+
             <div className="mx-auto my-10 bg-slate-200 px-5 py-6">
-            <h1 className="text-center text-2xl">Add Product</h1>
+                <h1 className="text-center text-2xl">Add Product</h1>
                 <form onSubmit={handleAddBtn} className="">
 
                     <div className="grid md:grid-cols-2 gap-4">
@@ -76,7 +76,16 @@ const AddProduct = () => {
                                 <label className="label">
                                     <span className="label-text">Brand Name</span>
                                 </label>
-                                <input type="text" name="brand" placeholder="brand name" className="input input-bordered w-full" required />
+                                <select name='brand' className="select select-bordered w-full max-w-xs">
+                                <option disabled selected>select product</option>
+                                <option>berger</option>
+                                <option>pepsi</option>
+                                <option>nescafe</option>
+                                <option>cocaCola</option>
+                                <option>starBucks</option>
+                                <option>kelloggs</option>
+                              </select>
+
                             </div>
 
                         </div>
