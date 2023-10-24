@@ -6,14 +6,25 @@ const ProductAll = ({ data }) => {
   console.log(_id);
   return (
 
+<div>
 
-    <div>
+
+    
+
+
+
+
+
+
+
+
+
       <div className="card card-compact bg-base-100 shadow-xl">
         <figure><img src={image} alt="Shoes" /></figure>
         <div className="card-body">
           <div className="grid grid-cols-2 justify-between">
-            <h2 className="card-title text-2xl">{product}</h2>
-            <h2 className="card-title text-2xl">{type}</h2>
+            <h2 className="card-title text-2xl font-bold">{product}</h2>
+            <h2 className="card-title text-2xl font-bold">{type}</h2>
             <h2 className="card-title text-lg">{brand}</h2>
             <h2 className="card-title text-lg">${price}</h2>
           </div>
@@ -35,10 +46,10 @@ const ProductAll = ({ data }) => {
           </div>
         </div>
       </div>
+
+
+
     </div>
-
-
-
   );
 };
 

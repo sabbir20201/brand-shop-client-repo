@@ -4,7 +4,7 @@
         "id": 1,
         "product_id": "a",
         "name": "McDonald's",
-        "image_url": "https://i.ibb.co/vhYzGyj/burger-king-bk-vector-logo.png"
+        "image_url": "https://i.ibb.co/nnVYHws/istockphoto-458737115-612x612.jpg"
       },
       {
         "id": 2,
@@ -15,8 +15,8 @@
       {
         "id": 3,
         "product_id": "c",
-        "name": " Nestle",
-        "image_url": "https://i.ibb.co/6RBN5Jp/6105.png"
+        "name": "Nestle",
+        "image_url": "https://i.ibb.co/QFpBW0s/flickr-nestle-corporate-logo-2020.jpg"
       },
       {
         "id": 4,

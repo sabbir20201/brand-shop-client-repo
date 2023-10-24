@@ -87,7 +87,7 @@ const UpdateProduct = () => {
                                 <label className="label">
                                     <span className="label-text">Brand Name</span>
                                 </label>
-                                <select name='brand' className="select select-bordered w-full max-w-xs">
+                                <select name='brand' defaultValue={brand} className="select select-bordered w-full max-w-xs">
                                     <option disabled selected>select product</option>
                                     <option>McDonald's</option>
                                     <option>Pepsi</option>

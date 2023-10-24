@@ -45,6 +45,7 @@ const AddProduct = () => {
                         confirmButtonText: 'Cool'
                     })
             })
+            e.target.reset()
     }
 
 
