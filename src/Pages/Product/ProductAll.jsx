@@ -25,7 +25,10 @@ const ProductAll = ({ data }) => {
           <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" />
         </div>
           <div className="card-actions flex justify-between">
-            <button className="btn btn-success text-white">Update</button>
+          <Link to={`/updateproduct/${_id}`}>
+          <button className="btn btn-success text-white">Update</button>
+
+          </Link>
             <Link to={`/product/brand/${data._id}`}>
               <button className="btn btn-primary">Details</button>
             </Link>
