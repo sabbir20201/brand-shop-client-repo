@@ -18,32 +18,38 @@ const ProductDetail = () => {
     const description = data.description;
     const brand = data.brand;
     const rating = data.rating;
-  }
+    const email = user.email;
 
-  const allProduct = {
-    image,
-    product,
-    price,
-    type,
-    description,
-    brand,
-    rating,
+    const allProduct = {
+      image,
+      product,
+      price,
+      type,
+      description,
+      brand,
+      rating,
+      email
 
-  }
-  console.log(allProduct);
+    }
+    console.log(allProduct);
 
-  fetch(``, {
-    method: 'POST',
-    headers: {
-      'content-type': 'application/json'
-    },
-    body: JSON.stringify(allProduct)
-  })
-    .then(res => res.json())
-    .then(data => {
-      console.log(data);
-
+    fetch(`http://localhost:5000/cards`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(allProduct)
     })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+
+      })
+
+
+  }
+
+
 
   return (
     <div className="py-10">

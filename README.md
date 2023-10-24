@@ -1,5 +1,13 @@
 # React + Vite
 
+
+* you can add your product in this project
+* you can modify your added product easily
+* if you are not sign in you colud not see your added product
+* your password should be at least one capital letter and one special charecter
+* you can see your product details 
+
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:

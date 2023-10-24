@@ -3,6 +3,8 @@ import { useContext } from 'react';
 // import { useCallback } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { NavLink } from 'react-router-dom';
+import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
+import app from '../../Firebase/Firebase.config';
 // import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
@@ -11,6 +13,8 @@ const Login = () => {
     // const navigate = useNavigate();
     const [loginError, setLoginError] = useState('');
     const [loginSuccess, setLoginSuccess] = useState('');
+    const auth = getAuth(app);
+    const provider = new GoogleAuthProvider();
 
 
     const handleLogin = e => {
@@ -33,7 +37,17 @@ const Login = () => {
             })
     }
 
+    const handleGoogleSignIn = () => {
+        signInWithPopup(auth, provider)
+        .then(result => {
+            const user = result.user;
+            console.log(user);
+        })
+        .catch(error => {
+            console.log('error', error.message);
+        })
 
+    }
     return (
         <div>
             <div className="w-1/2 mx-auto">
@@ -69,11 +83,12 @@ const Login = () => {
                         <button className="btn btn-primary">Login</button>
                         <p>don't have an account ? <NavLink to="/register" className="text-red-400 font-semibold">Sign Up</NavLink></p>
                     </div>
-                    <div className="form-control mt-6">
-                        <button className="btn btn-primary">google</button>
-                    </div>
+
 
                 </form>
+                <div className="form-control mt-6">
+                    <button onClick={handleGoogleSignIn} className="btn bg-green-300 hover:bg-green-400">google</button>
+                </div>
             </div>
         </div>
     );

@@ -2,25 +2,13 @@ import { Link } from "react-router-dom";
 
 const ProductAll = ({ data }) => {
 
-  const { image, _id, product, price, type, description, brand } = data;
+  const { image, _id, product, price, type, brand } = data;
   console.log(_id);
   return (
 
-<div>
-
-
-    
-
-
-
-
-
-
-
-
-
-      <div className="card card-compact bg-base-100 shadow-xl">
-        <figure><img src={image} alt="Shoes" /></figure>
+<div className="">
+      <div className="card card-compact max-h-96 bg-base-100 shadow-xl">
+        <figure><img src={image} className=" h-full" alt="Shoes" /></figure>
         <div className="card-body">
           <div className="grid grid-cols-2 justify-between">
             <h2 className="card-title text-2xl font-bold">{product}</h2>
@@ -40,7 +28,7 @@ const ProductAll = ({ data }) => {
           <button className="btn btn-success text-white">Update</button>
 
           </Link>
-            <Link to={`/product/brand/${data._id}`}>
+            <Link to={`/product/brand/${_id}`}>
               <button className="btn btn-primary">Details</button>
             </Link>
           </div>

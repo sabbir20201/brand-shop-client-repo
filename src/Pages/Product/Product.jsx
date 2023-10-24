@@ -6,7 +6,7 @@ const Product = ({ data }) => {
 
   return (
 
-    <div>
+    <div className="">
       <Link to={`/product/${name}`}>
         <div className="card bg-base-100 shadow-xl">
           <figure className="py-10">

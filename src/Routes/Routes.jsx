@@ -45,8 +45,10 @@ const MyCreatedRoutes = createBrowserRouter([
                 loader: ({params}) => fetch(`http://localhost:5000/brand/${params.id}`)
             },
             {
-                path: '/myCard',
-                element: <PrivateRoutes> <MyCard></MyCard> </PrivateRoutes>
+                path: '/cards/:email',
+                element: <PrivateRoutes> <MyCard></MyCard> </PrivateRoutes>,
+                loader: ({params})=> fetch(`http://localhost:5000/cards/${params.email}`)
+
             },
             {
                 path: '/Login',

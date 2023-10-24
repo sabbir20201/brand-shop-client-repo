@@ -26,18 +26,13 @@ const OurBeverage = () => {
         "price": 39.99,
         "img": "https://i.ibb.co/StdTP3H/beverage-7.jpg"
     }
-    ]
-
-
-
-
-
+    ];
 
     return (
-        <div className="">
+        <div className="mx-4">
 
 <h1 className="text-4xl font-bold text-center mt-6">Our Beverage</h1>
-        <div className="grid grid-cols-4 gap-3 my-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 my-20">
        
                 {
                     data.map((item, index) => {
@@ -45,7 +40,7 @@ const OurBeverage = () => {
                          
                             <div key={item.id} className="bg-white rounded-md shadow-md">
                                 <div className="items-center">
-                                    <img src={item.img} alt={item.name} className="object-cover" />
+                                    <img src={item.img} alt={item.name} className="object-cover w-full" />
                                     <div className="ml-4">
                                         <h3 className="text-lg font-bold">{item.name}</h3>
                                         <div className="items-center">

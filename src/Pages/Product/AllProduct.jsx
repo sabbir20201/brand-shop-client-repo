@@ -9,7 +9,8 @@ const AllProduct = () => {
     console.log(data);
     
     return (
-        <div>
+        <div className='py-10'>
+        <section>
         <div className="carousel max-h-96 w-full">
         <div id="slide1" className="carousel-item relative w-full">
           <img src="https://i.ibb.co/8b8nLW8/coke-one-brand-4.jpg" className="w-full" />
@@ -40,14 +41,17 @@ const AllProduct = () => {
           </div>
         </div>
       </div>
-    
-   
-        <div className='grid grid-cols-3 gap-4'>
-        
+        </section>
+       
+    <section className=' pt-7'>
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
        {
         data.map(item => <ProductAll key={item.id} data={item}></ProductAll>)
        }
         </div>
+    </section>
+   
+        
 
 
         </div>

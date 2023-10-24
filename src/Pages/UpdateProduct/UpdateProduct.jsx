@@ -63,7 +63,7 @@ const UpdateProduct = () => {
         <div>
 
             <div className="mx-auto my-10 bg-slate-200 px-5 py-6">
-                <h1 className="text-center text-2xl">update product</h1>
+                <h1 className="text-center text-2xl font-bold">Update Product</h1>
                 <form onSubmit={handleUpdateBtn} className="">
 
                     <div className="grid md:grid-cols-2 gap-4">
@@ -87,8 +87,8 @@ const UpdateProduct = () => {
                                 <label className="label">
                                     <span className="label-text">Brand Name</span>
                                 </label>
-                                <select name='brand' defaultValue={brand} className="select select-bordered w-full max-w-xs">
-                                    <option disabled selected>select product</option>
+                                <select name='brand' defaultValue={brand} className="select select-bordered w-[500] max-w-xs">
+                                    <option disabled selected className=' w-full'>select product</option>
                                     <option>McDonald's</option>
                                     <option>Pepsi</option>
                                     <option>Nestle</option>

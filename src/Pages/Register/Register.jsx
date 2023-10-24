@@ -78,7 +78,7 @@ const Register = () => {
                 }
                 {
                     registerError &&
-                    <div className="text-red-400">
+                    <div className="text-red-500">
                         {registerError}
                     </div>
                 }

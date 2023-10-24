@@ -8,7 +8,7 @@ const Banner = () => {
           <div className="max-w-md">
             <h1 className="mb-5 text-5xl font-bold">Explore Culinary Delights with Us!</h1>
             <p className="mb-5">"At Foodily, we're on a mission to create culinary experiences that delight your taste buds. From classic comfort foods to innovative gourmet creations, our menu has something for everyone. Explore the world of flavors with us!"</p>
-            <button className="btn btn-primary">Get Started</button>
+            <button className="btn bg-green-300">Get Started</button>
           </div>
         </div>
       </div>

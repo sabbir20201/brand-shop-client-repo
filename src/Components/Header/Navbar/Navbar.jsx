@@ -14,12 +14,11 @@ const Navbar = () => {
     const links = <>
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/AddProduct'>Add Product</NavLink></li>
-        <li><NavLink to='/myCard'>My Card</NavLink></li>
+        {
+            user&&<li><NavLink to={`/cards/${user.email}`}>My Card</NavLink></li>
+        }
 
-
-
-
-    </>
+          </>
 
 
 
@@ -51,9 +50,9 @@ const Navbar = () => {
                 <div className="navbar-end">
                     {
                         user ?
-                            <div>
-                                <span>{user.email}</span>
-                                <span><img src={user.photoURL} /></span>
+                            <div className="flex">
+                                <span>{user.displayName}</span>
+                                <span className="w-10 p-0 rounded-full"><img src={user.photoURL} /></span>
                                 <button onClick={handleSignout} className="btn btn-sm">LogOut</button>
 
                             </div>
@@ -62,6 +61,8 @@ const Navbar = () => {
                                 <button className="btn btn-sm">login</button>
                             </NavLink>
                     }
+                  
+                 
 
                 </div>
             </div>
