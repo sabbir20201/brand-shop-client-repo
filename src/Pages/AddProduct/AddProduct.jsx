@@ -78,11 +78,11 @@ const AddProduct = () => {
                                 </label>
                                 <select name='brand' className="select select-bordered w-full max-w-xs">
                                 <option disabled selected>select product</option>
-                                <option>berger</option>
-                                <option>pepsi</option>
-                                <option>nescafe</option>
-                                <option>cocaCola</option>
-                                <option>starBucks</option>
+                                <option>McDonald's</option>
+                                <option>Pepsi</option>
+                                <option>Nestle</option>
+                                <option>Coca-Cola</option>
+                                <option>StarBucks</option>
                                 <option>kelloggs</option>
                               </select>
 

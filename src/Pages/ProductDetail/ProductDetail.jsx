@@ -4,23 +4,33 @@ const ProductDetail = () => {
 
     const data = useLoaderData();
     console.log(data);
+    const { image, _id, product, price, type, description, brand } = data;
     return (
         <div>
-            <h1>product detals</h1>
-            <div>
-                <div className="card w-96 bg-base-100 shadow-xl">
-                    <figure className="px-10 pt-10">
-                        <img src={data.image} alt="Shoes" className="rounded-xl" />
-                    </figure>
-                    <div className="card-body items-center text-center">
-                        <h2 className="card-title">{data.name}</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div className="card-actions">
-                            <button className="btn btn-primary">{data._id}</button>
-                        </div>
-                    </div>
-                </div>
+        
+    
+            <div className="grid grid-cols-2 shadow-xl">
+       <div className="">
+       <figure><img src={image} className="" alt="Album"/></figure>
+
+       </div>
+          
+            <div className="card-body">
+              <h2 className="card-title">name: {product}</h2>
+              <h2 className="card-title">Brand: {brand}</h2>
+              <h2 className="card-title">Price: {price}</h2>
+              <h2 className="card-title">Category: {type}</h2>
+
+              <p>details:{description}</p>
+              <div className="card-actions justify-start">
+                <button className="btn btn-primary">Add To Card</button>
+              </div>
             </div>
+          </div>
+
+
+
+
         </div>
     );
 };
