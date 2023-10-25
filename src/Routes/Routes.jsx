@@ -11,6 +11,8 @@ import AllProduct from "../Pages/Product/AllProduct";
 import ProductDetail from "../Pages/ProductDetail/ProductDetail";
 import UpdateProduct from "../Pages/UpdateProduct/UpdateProduct";
 
+
+
 const MyCreatedRoutes = createBrowserRouter([
     {
         path: '/',
@@ -25,13 +27,13 @@ const MyCreatedRoutes = createBrowserRouter([
             {
                 path: '/product/:brand',
                 element: <AllProduct></AllProduct>,
-                loader: ({ params }) => fetch(`http://localhost:5000/product/${params.brand}`)
+                loader: ({ params }) => fetch(`https://brand-shop-beige.vercel.app/product/${params.brand}`)
             },
 
             {
                 path: '/product/brand/:id',
                 element: <ProductDetail></ProductDetail>,
-                loader: ({ params }) => fetch(`http://localhost:5000/product/brand/${params.id}`)
+                loader: ({ params }) => fetch(`https://brand-shop-beige.vercel.app/product/brand/${params.id}`)
             },
             {
                 path: '/AddProduct',
@@ -40,12 +42,12 @@ const MyCreatedRoutes = createBrowserRouter([
             {
                 path: '/updateproduct/:id',
                 element: <UpdateProduct></UpdateProduct>,
-                loader: ({ params }) => fetch(`http://localhost:5000/brand/${params.id}`)
+                loader: ({ params }) => fetch(`https://brand-shop-beige.vercel.app/brand/${params.id}`)
             },
             {
                 path: '/cards/:email',
                 element: <PrivateRoutes> <MyCard></MyCard> </PrivateRoutes>,
-                loader: ({ params }) => fetch(`http://localhost:5000/cards/${params.email}`)
+                loader: ({ params }) => fetch(`https://brand-shop-beige.vercel.app/cards/${params.email}`)
             },
             {
                 path: '/Login',

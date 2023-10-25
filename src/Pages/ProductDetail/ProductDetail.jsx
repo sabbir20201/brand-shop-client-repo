@@ -33,7 +33,7 @@ const ProductDetail = () => {
 
     }
 
-    fetch(`http://localhost:5000/cards`, {
+    fetch(`https://brand-shop-beige.vercel.app/cards`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
