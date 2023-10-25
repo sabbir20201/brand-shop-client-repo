@@ -1,6 +1,6 @@
 # React + Vite
 
- live link: https://brand-shop-assignment10.web.app/cards/notun@notun.com
+ live link: https://brand-shop-assignment10.web.app/
 * you can add your product in this project
 * you can modify your added product easily
 * if you are not sign in you colud not see your added product
