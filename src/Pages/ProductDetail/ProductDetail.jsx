@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 const ProductDetail = () => {
 
@@ -8,7 +9,7 @@ const ProductDetail = () => {
   const { user } = useContext(AuthContext);
 
   console.log(user);
-  const { image, _id, product, price, type, rating, description, brand } = data;
+  const { image, product, price, type, brand } = data;
 
   const handleAddCard = () => {
     const image = data.image;
@@ -31,7 +32,6 @@ const ProductDetail = () => {
       email
 
     }
-    console.log(allProduct);
 
     fetch(`http://localhost:5000/cards`, {
       method: 'POST',
@@ -42,7 +42,13 @@ const ProductDetail = () => {
     })
       .then(res => res.json())
       .then(data => {
-        console.log(data);
+        if (data.insertedId)
+          Swal.fire({
+            title: 'success',
+            text: 'product added successfully',
+            icon: 'success',
+            confirmButtonText: 'Cool'
+          })
 
       })
 
@@ -59,11 +65,11 @@ const ProductDetail = () => {
         </div>
 
         <div className="card-body">
-          <h2 className="card-title">name: {product}</h2>
+          <h2 className="card-title">Name: {product}</h2>
           <h2 className="card-title">Brand: {brand}</h2>
           <h2 className="card-title">Price: $ {price}</h2>
           <h2 className="card-title">Category: {type}</h2>
-          <p>details:{description}</p>
+          <p><span className="card-title"> Details: </span> Savor the exquisite flavors of our signature dish, the Grilled Salmon Fillet. Delicately seasoned and cooked to perfection, it's a culinary masterpiece that tantalizes the taste buds with a harmonious blend of rich, smoky notes and a melt-in-your-mouth texture. A symphony of taste awaits you.</p>
 
           <div className="card-actions justify-start">
             <button onClick={handleAddCard} className="btn btn-primary">Add To Card</button>

@@ -30,14 +30,12 @@ const OurBeverage = () => {
 
     return (
         <div className="mx-4">
-
-<h1 className="text-4xl font-bold text-center mt-6">Our Beverage</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 my-20">
-       
+            <h1 className="text-4xl font-bold text-center mt-6">Our Beverage</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 my-20">
                 {
                     data.map((item, index) => {
                         return (
-                         
+
                             <div key={item.id} className="bg-white rounded-md shadow-md">
                                 <div className="items-center">
                                     <img src={item.img} alt={item.name} className="object-cover w-full" />
@@ -50,11 +48,10 @@ const OurBeverage = () => {
                                     </div>
                                 </div>
                             </div>
-                          
                         )
                     })
                 }
-        </div>
+            </div>
 
         </div>
     );

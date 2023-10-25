@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
 import { useContext } from 'react';
-// import { useCallback } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { NavLink } from 'react-router-dom';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from '../../Firebase/Firebase.config';
-// import { useNavigate } from 'react-router-dom';
+
 
 const Login = () => {
 
     const { signIn } = useContext(AuthContext);
-    // const navigate = useNavigate();
     const [loginError, setLoginError] = useState('');
     const [loginSuccess, setLoginSuccess] = useState('');
     const auth = getAuth(app);
@@ -28,11 +26,10 @@ const Login = () => {
                 console.log(result.user);
                 e.target.reset();
                 setLoginSuccess('logged in successfully')
-                // navigate('/')
+               
 
             })
             .catch(error => {
-                console.error(error);
                 setLoginError(error.message);
             })
     }
@@ -49,7 +46,8 @@ const Login = () => {
 
     }
     return (
-        <div>
+        <div className=' mb-7'>
+        <h1 className='text-center font-bold text-3xl pt-4'>Login here</h1>
             <div className="w-1/2 mx-auto">
                 <form onSubmit={handleLogin}>
                     <div className="form-control">

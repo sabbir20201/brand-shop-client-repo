@@ -1,8 +1,8 @@
 
 const Banner = () => {
-    return (
-        <div>
-        <div className="hero min-h-screen" style={{backgroundImage: 'url(https://i.ibb.co/bsbykdn/1.jpg)'}}>
+  return (
+    <div>
+      <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/bsbykdn/1.jpg)' }}>
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
@@ -12,8 +12,8 @@ const Banner = () => {
           </div>
         </div>
       </div>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default Banner;

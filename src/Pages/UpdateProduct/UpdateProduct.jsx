@@ -32,7 +32,7 @@ const UpdateProduct = () => {
             description,
             rating
         }
-        console.log(UpdatedProduct);
+
 
         fetch(`http://localhost:5000/brand/${_id}`, {
             method: 'PUT',
@@ -48,16 +48,11 @@ const UpdateProduct = () => {
                     Swal.fire({
                         title: 'success',
                         text: 'product updated successfully',
-                        title: 'success',
                         icon: 'success',
                         confirmButtonText: 'Cool'
                     })
             })
     }
-
-
-
-
 
     return (
         <div>

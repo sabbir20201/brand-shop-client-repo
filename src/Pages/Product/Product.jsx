@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
 
 const Product = ({ data }) => {
-  const {id, name, image_url } = data
-  console.log(id);
+  const { name, image_url } = data
+ 
 
   return (
-
     <div className="">
       <Link to={`/product/${name}`}>
         <div className="card bg-base-100 shadow-xl">

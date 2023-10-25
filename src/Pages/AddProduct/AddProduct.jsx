@@ -24,7 +24,6 @@ const AddProduct = () => {
             description,
             rating
         }
-        console.log(newProduct);
 
         fetch('http://localhost:5000/product', {
             method: 'POST',
@@ -35,17 +34,15 @@ const AddProduct = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 if (data.insertedId)
                     Swal.fire({
                         title: 'success',
                         text: 'product successfully inserted',
-                        title: 'success',
                         icon: 'success',
                         confirmButtonText: 'Cool'
                     })
             })
-            e.target.reset()
+        e.target.reset()
     }
 
 
@@ -78,14 +75,14 @@ const AddProduct = () => {
                                     <span className="label-text">Brand Name</span>
                                 </label>
                                 <select name='brand' className="select select-bordered w-full max-w-xs">
-                                <option disabled selected>select product</option>
-                                <option>McDonald's</option>
-                                <option>Pepsi</option>
-                                <option>Nestle</option>
-                                <option>Coca-Cola</option>
-                                <option>StarBucks</option>
-                                <option>kelloggs</option>
-                              </select>
+                                    <option disabled selected>select product</option>
+                                    <option>McDonald's</option>
+                                    <option>Pepsi</option>
+                                    <option>Nestle</option>
+                                    <option>Coca-Cola</option>
+                                    <option>StarBucks</option>
+                                    <option>kelloggs</option>
+                                </select>
 
                             </div>
 

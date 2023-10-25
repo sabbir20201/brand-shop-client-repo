@@ -6,16 +6,13 @@ import { Outlet } from 'react-router-dom';
 
 const Root = () => {
     return (
-        <div className="">
+        <div>
             <Navbar></Navbar>
-           <div className="max-w-6xl mx-auto">
-           <Outlet></Outlet>
-           
-           </div>
-            
-           <Footer></Footer>
+            <div className="max-w-6xl mx-auto">
+                <Outlet></Outlet>
+            </div>
+            <Footer></Footer>
         </div>
-  
     );
 };
 
